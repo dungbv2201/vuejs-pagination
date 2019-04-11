@@ -1,9 +1,16 @@
 require('./bootstrap');
 import Vue from "vue";
-import ExampleComponent from "./components/ExampleComponent"
+import App from "./components/App"
+import Router from "vue-router";
+import Routes from './routes'
 
+Vue.use(Router);
+const router = new Router({
+    routes: Routes
+});
 
 const app = new Vue({
     el: '#app',
-    render:h=>h(ExampleComponent)
+    router: router,
+    render: h => h(App)
 });
