@@ -13,7 +13,14 @@
             <th scope="row">{{stt[index]}}</th>
             <td>{{user.name}}</td>
             <td>{{user.email}}</td>
-            <td width="25%">
+            <td >
+                <router-link
+                    tag="a"
+                    :to="{ name:'users.show', params:{id:$route.params.id} }"
+                    class="btn btn-success"
+                >
+                    Show
+                </router-link>
                 <button class="btn btn-primary mr-2">Edit</button>
                 <button class="btn btn-danger" @click="deleteProduct(user.id)">Delete</button>
             </td>

@@ -39,8 +39,6 @@
         },
         methods: {
             handelClick: function (page) {
-                history.pushState(null, '', '#page='+ page);
-        
                 console.log(window.history.length);
                 console.log(window.location);
                 this.$emit('updateData', page);
